@@ -1,13 +1,11 @@
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
-  name: postgres-pvc
-  labels:
-    type: local
+  name: postgres-pvc-2
 spec:
   accessModes:
-    - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
-  volumeName: postgres-pv
+  storageClassName: do-block-storage
