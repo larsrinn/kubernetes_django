@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      pod: django
+      app: django
   template:
     metadata:
       labels:
-        pod: django
+        app: django
     spec:
       containers:
         - name: django
-          image: gitumarkk/k8_django_minikube:part_4
+          image: larsrinn/django_kubernetes:2019-05-05-01
           ports:
             - containerPort: 8000
           env:
