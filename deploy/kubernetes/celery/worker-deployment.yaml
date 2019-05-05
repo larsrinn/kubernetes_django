@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      pod: celery-worker
+      app: celery-worker
   template:
     metadata:
       labels:
-        pod: celery-worker
+        app: celery-worker
     spec:
       containers:
         - name: celery-worker
-          image: gitumarkk/k8_django_minikube:part_4
+          image: larsrinn/django_kubernetes:2019-05-05-01
           command: ['celery', '-A', 'kubernetes_django', 'worker', '-l', 'info']
           env:
             - name: POSTGRES_USER

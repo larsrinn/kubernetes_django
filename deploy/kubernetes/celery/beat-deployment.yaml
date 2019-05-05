@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      pod: celery-beat
+      app: celery-beat
   template:
     metadata:
       labels:
-        pod: celery-beat
+        app: celery-beat
     spec:
       containers:
         - name: celery-beat
-          image: gitumarkk/k8_django_minikube:part_4
+          image: larsrinn/django_kubernetes:2019-05-05-01
           command: ['celery', '-A', 'kubernetes_django', 'beat', '-l', 'debug']
           env:
             - name: POSTGRES_USER
