@@ -1,8 +1,9 @@
 celery
-Django==2.0
-django-health-check==3.0.0
+Django
+django-health-check
 django-redis
-flower==0.9.3
+flower
 psycopg2-binary
 redis
 gunicorn
+whitenoise
