@@ -3,5 +3,6 @@ Django==2.0
 django-health-check==3.0.0
 django-redis
 flower==0.9.3
-psycopg2==2.7.5
+psycopg2-binary
 redis
+gunicorn

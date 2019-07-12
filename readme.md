@@ -6,8 +6,8 @@ How to deploy on Digital Ocean:
 Locally:
 * Run `minikube start` 
 * Confirm `minikube status` 
-* Confirm `kubectl config current-context` 
 * Run `eval $(minikube docker-env)`
+* Confirm `kubectl config current-context` 
 * Open dashboard: `minikube dashboard`
 * Run
     * `cd deploy/kubernetes`
@@ -23,6 +23,7 @@ Shutdown:
 * Run `minikube delete`
 
 ## todo
+* gunicorn
 * nginx
 * staticfiles
 * healthchecks
