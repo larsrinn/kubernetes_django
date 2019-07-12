@@ -23,9 +23,6 @@ Shutdown:
 * Run `minikube delete`
 
 ## todo
-* gunicorn
 * nginx
-* staticfiles
-* healthchecks
+* media
 * https://medium.com/@markgituma/kubernetes-local-to-production-with-django-6-add-prometheus-grafana-monitoring-with-helm-926fafbe1d
- 
