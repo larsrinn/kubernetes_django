@@ -1,0 +1,5 @@
+.idea
+.gitignore
+staticfiles
+*.pyc
+__pycache__

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: django
-          image: larsrinn/django_kubernetes:2019-07-12-04
+          image: larsrinn/django_kubernetes:2019-07-13-02
           ports:
             - containerPort: 8000
           env:
@@ -37,18 +37,18 @@ spec:
 
             - name: REDIS_HOST
               value: redis-service
-
-          livenessProbe:
-            httpGet:
-              path: /healthcheck
-              port: 8000
-            initialDelaySeconds: 10
-            timeoutSeconds: 10 # reduce when proper endpoint is implemented -> current one might take long to respond if celery is not running
-            periodSeconds: 10
-
-          readinessProbe:
-            httpGet:
-              path: /healthcheck
-              port: 8000
-            initialDelaySeconds: 10
-            timeoutSeconds: 10
+#
+#          livenessProbe:
+#            httpGet:
+#              path: /healthcheck
+#              port: 8000
+#            initialDelaySeconds: 10
+#            timeoutSeconds: 10 # reduce when proper endpoint is implemented -> current one might take long to respond if celery is not running
+#            periodSeconds: 10
+#
+#          readinessProbe:
+#            httpGet:
+#              path: /healthcheck
+#              port: 8000
+#            initialDelaySeconds: 10
+#            timeoutSeconds: 10

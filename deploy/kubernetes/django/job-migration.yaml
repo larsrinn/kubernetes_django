@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: django
-          image: larsrinn/django_kubernetes:2019-07-12-04
+          image: larsrinn/django_kubernetes:2019-07-13-01
           command: ['python', 'manage.py', 'migrate']
           env:
             - name: POSTGRES_USER
