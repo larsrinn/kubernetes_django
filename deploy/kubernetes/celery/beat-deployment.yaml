@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: celery-beat
   labels:
-    app: celery-beat
+    deployment: celery-beat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      pod: celery-beat
+      app: celery-beat
   template:
     metadata:
       labels:
-        pod: celery-beat
+        app: celery-beat
     spec:
       containers:
         - name: celery-beat
-          image: gitumarkk/k8_django_minikube:part_4
+          image: larsrinn/django_kubernetes:2019-08-12-03
           command: ['celery', '-A', 'kubernetes_django', 'beat', '-l', 'debug']
           env:
             - name: POSTGRES_USER
