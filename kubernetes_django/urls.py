@@ -18,11 +18,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from demoapp.views import healthcheck
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Creating the health check endpoint
-    path(r'healthcheck/', include('health_check.urls')),
+    path(r'/', include('health_check.urls')),
+    path("healthcheck/", healthcheck),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

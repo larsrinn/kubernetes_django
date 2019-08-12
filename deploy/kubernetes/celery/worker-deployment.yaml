@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: celery-worker
-          image: larsrinn/django_kubernetes:2019-05-05-01
+          image: larsrinn/django_kubernetes:2019-08-12-03
           command: ['celery', '-A', 'kubernetes_django', 'worker', '-l', 'info']
           env:
             - name: POSTGRES_USER
